@@ -1,0 +1,62 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+ul,li,ol {
+    list-style: none;
+}
+
+.wrap {
+    width: 800px;
+    height: 800px;
+    background: #dddddd;
+    margin: 20px auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.plane {
+    width: 120px;
+    height: 100px;
+    position: absolute;
+    cursor: pointer;
+    background-image: url("../img/hero02.png");
+    background-repeat: no-repeat;
+    /*//保持图像的纵横比并将图像缩放成将适合背景定位区域的最大大小。*/
+    background-size: contain;
+}
+
+.bullet {
+    width: 5px;
+    height: 30px;
+    background: #ff6034;
+    border-radius: 100%;
+    position: absolute;
+}
+
+.targetDiv {
+    width: 120px;
+    height: 100px;
+    position: absolute;
+    /*top: -60px;*/
+    font-size: 22px;
+    color: #ffffff;
+    background-repeat: no-repeat;
+}
+
+.no_boom {
+    background-image: url("../img/enemy.png");
+}
+
+@keyframes mymove {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+
+.yes_boom {
+    background-image: url("../img/boom02.png");
+    animation: mymove 0.2s;
+    animation-fill-mode: forwards;
+}
+
